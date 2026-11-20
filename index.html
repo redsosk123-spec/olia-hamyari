@@ -2,91 +2,125 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0f3d5e">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
 <title>پویش همیاری | دبیرستان پسرانه حسین اولیا (دوره اول)</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css">
 <style>
-*{box-sizing:border-box;margin:0;padding:0;font-family:Vazirmatn,Tahoma,sans-serif}
-body{background:#f6f8fb;color:#1e293b;line-height:1.9}
-body::before{content:"";position:fixed;inset:0;background:url('school-bg.png') center/cover no-repeat;opacity:.09;pointer-events:none;z-index:0}
-.header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid #e2e8f0;display:flex;justify-content:space-between;align-items:center;padding:12px 20px}
-.logo{display:flex;align-items:center;gap:10px;font-weight:900;color:#0f3d5e}
-.logo span.badge{background:#0f3d5e;color:#fff;width:44px;height:44px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:20px}
-.btn{display:inline-block;background:#f59e0b;color:#1e1e1e;font-weight:800;padding:12px 26px;border-radius:14px;text-decoration:none;border:none;cursor:pointer}
-.btn-blue{background:#0f3d5e;color:#fff}
-.hero{position:relative;z-index:1;color:#fff;padding:70px 20px;text-align:center;background:linear-gradient(135deg,rgba(15,61,94,.92) 0%,rgba(20,90,138,.8) 60%,rgba(14,165,164,.7) 100%),url('school-bg.png') center/cover no-repeat #0f3d5e}
-.hero h1{font-size:28px;margin:10px 0}
-.hero-pill{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);padding:6px 16px;border-radius:100px;font-size:14px}
-.stats{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:25px}
-.stat{background:#fff;color:#0f3d5e;border-radius:16px;padding:12px 22px;min-width:140px}
-.stat b{font-size:22px;display:block}
-.container{max-width:1050px;margin:auto;padding:20px;position:relative;z-index:1}
-.card{background:#fff;border-radius:20px;padding:22px;margin:16px 0;box-shadow:0 6px 20px rgba(0,0,0,.06);border:1px solid #eef2f7}
-h2{color:#0f3d5e;margin-bottom:10px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
-.project{border:2px solid #eef2f7;border-radius:18px;padding:18px;background:#fff}
+:root{--navy:#0f3d5e;--gold:#f59e0b;--bg:#f6f8fb;--line:#e2e8f0;--muted:#64748b}
+*{box-sizing:border-box;margin:0;padding:0;font-family:Vazirmatn,Tahoma,sans-serif;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:#1e293b;line-height:1.9;padding-bottom:78px}
+@media(min-width:768px){body{padding-bottom:0}}
+body::before{content:"";position:fixed;inset:0;background:url('school-bg.png') center/cover no-repeat;opacity:.08;pointer-events:none;z-index:0}
+section,[id]{scroll-margin-top:84px}
+.header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 14px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:900;color:var(--navy);font-size:14px;line-height:1.5;min-width:0}
+.logo small{font-weight:400;color:var(--muted);font-size:12px;display:block}
+.badge{background:var(--navy);color:#fff;width:42px;height:42px;min-width:42px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:20px}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--gold);color:#1e1e1e;font-weight:800;padding:12px 22px;border-radius:14px;text-decoration:none;border:none;cursor:pointer;font-size:16px;min-height:52px;transition:.18s}
+.btn:active{transform:scale(.98)}
+.btn-blue{background:var(--navy);color:#fff}
+.btn-ghost{background:#fff;color:var(--navy);border:2px solid var(--line);min-height:48px}
+.header .btn{min-height:44px;padding:8px 16px;font-size:14px;white-space:nowrap}
+.hero{position:relative;z-index:1;color:#fff;padding:52px 16px 30px;text-align:center;background:linear-gradient(135deg,rgba(15,61,94,.94) 0%,rgba(20,90,138,.82) 60%,rgba(14,165,164,.72) 100%),url('school-bg.png') center/cover no-repeat var(--navy)}
+.hero h1{font-size:clamp(20px,5.6vw,30px);margin:10px 0;line-height:1.6;text-shadow:0 2px 12px rgba(0,0,0,.35)}
+.hero p{opacity:.95;max-width:680px;margin:8px auto;font-size:clamp(13px,3.8vw,16px)}
+.hero-pill{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);padding:5px 14px;border-radius:100px;font-size:12px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:18px;max-width:700px;margin-left:auto;margin-right:auto}
+.stat{background:#fff;color:var(--navy);border-radius:16px;padding:10px 6px}
+.stat b{font-size:clamp(15px,4.5vw,22px);display:block;line-height:1.4}
+.stat small{font-size:11px;color:var(--muted)}
+.hero-btns{display:flex;gap:8px;justify-content:center;margin-top:16px;flex-wrap:wrap}
+.hero-btns .btn{flex:1;min-width:140px;max-width:300px}
+.container{max-width:1050px;margin:auto;padding:14px 14px 10px;position:relative;z-index:1}
+.card{background:#fff;border-radius:20px;padding:18px;margin:12px 0;box-shadow:0 6px 20px rgba(0,0,0,.06);border:1px solid #eef2f7}
+h2{color:var(--navy);margin-bottom:8px;font-size:clamp(16px,4.5vw,20px)}
+.grid{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:720px){.grid{grid-template-columns:1fr 1fr}}
+.project{border:2px solid #eef2f7;border-radius:18px;padding:16px;background:#fff;display:flex;flex-direction:column}
+.project h3{font-size:16px;margin:6px 0 2px}
+.project p{font-size:13px;color:var(--muted)}
 .progress{height:12px;background:#e2e8f0;border-radius:100px;overflow:hidden;margin:10px 0}
-.bar{height:100%;background:linear-gradient(90deg,#f59e0b,#10b981);border-radius:100px}
-.tag{display:inline-block;background:#fef3c7;color:#92400e;font-size:12px;padding:3px 10px;border-radius:100px;margin:4px 0}
-.amounts{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
-.amt{border:2px solid #e2e8f0;padding:10px 16px;border-radius:12px;cursor:pointer;font-weight:700;background:#fff}
-.amt.sel{background:#0f3d5e;color:#fff;border-color:#0f3d5e}
-input,select{width:100%;padding:11px;border:2px solid #e2e8f0;border-radius:12px;margin:6px 0;font-family:inherit}
-.cardnum{background:#0f3d5e;color:#fff;border-radius:16px;padding:18px;text-align:center;margin:12px 0}
-.cardnum b{font-size:24px;letter-spacing:2px;direction:ltr;display:block;margin:8px 0}
-.copy{background:#fff;color:#0f3d5e;border:none;padding:8px 18px;border-radius:10px;font-weight:800;cursor:pointer}
+.bar{height:100%;background:linear-gradient(90deg,var(--gold),#10b981);border-radius:100px}
+.tag{display:inline-block;background:#fef3c7;color:#92400e;font-size:12px;padding:3px 10px;border-radius:100px;margin:4px 0;width:fit-content}
+.pmeta{font-size:13px;background:#f8fafc;border-radius:12px;padding:8px 10px;margin-top:6px}
+.project .btn{width:100%;margin-top:10px}
+.amounts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}
+@media(min-width:600px){.amounts{grid-template-columns:repeat(4,1fr)}}
+.amt{border:2px solid var(--line);padding:14px 8px;border-radius:14px;cursor:pointer;font-weight:800;background:#fff;text-align:center;font-size:15px;min-height:54px;display:flex;align-items:center;justify-content:center}
+.amt.sel{background:var(--navy);color:#fff;border-color:var(--navy)}
+label{font-size:14px;font-weight:700;display:block;margin-top:8px}
+input,select{width:100%;padding:14px;font-size:16px;border:2px solid var(--line);border-radius:14px;margin:6px 0;font-family:inherit;background:#fff}
+input:focus,select:focus{outline:none;border-color:var(--navy)}
+.cardnum{background:var(--navy);color:#fff;border-radius:16px;padding:18px 14px;text-align:center;margin:12px 0}
+.cardnum b{font-size:clamp(17px,5vw,24px);letter-spacing:1px;direction:ltr;display:block;margin:10px 0;user-select:all;word-spacing:2px}
+.copy{background:#fff;color:var(--navy);border:none;padding:12px 22px;border-radius:12px;font-weight:800;cursor:pointer;font-size:15px;min-height:48px;width:100%}
+@media(min-width:600px){.copy{width:auto}}
 .supporters{display:flex;gap:8px;flex-wrap:wrap}
-.sup{background:#f1f5f9;border-radius:12px;padding:8px 14px;font-size:14px}
-.faq details{background:#fff;border-radius:12px;padding:12px 16px;margin:8px 0;border:1px solid #e2e8f0}
-.footer{background:#0f3d5e;color:#cbd5e1;text-align:center;padding:30px 20px;margin-top:30px;border-radius:24px 24px 0 0;position:relative;z-index:1}
+.sup{background:#f1f5f9;border-radius:12px;padding:8px 14px;font-size:13px}
+.note{background:#ecfdf5;border:1px dashed #10b981;border-radius:14px;padding:12px;margin:12px 0;font-size:13px}
+.faq details{background:#fff;border-radius:14px;padding:14px 14px;margin:8px 0;border:1px solid var(--line);font-size:14px}
+.faq summary{cursor:pointer;font-weight:700;min-height:44px;display:flex;align-items:center}
+.footer{background:var(--navy);color:#cbd5e1;text-align:center;padding:26px 16px 20px;margin-top:20px;border-radius:24px 24px 0 0;position:relative;z-index:1;font-size:14px}
 .footer b{color:#fff}
-.note{background:#ecfdf5;border:1px dashed #10b981;border-radius:14px;padding:14px;margin:12px 0;font-size:14px}
-#adminPanel{border:3px solid #f59e0b;background:#fffbeb}
-.admin-row{border:1px solid #e2e8f0;border-radius:14px;padding:12px;margin:10px 0;background:#fff}
-.admin-row h4{color:#0f3d5e}
-.small{font-size:13px;color:#64748b}
+.mobile-bar{position:fixed;bottom:0;left:0;right:0;z-index:40;background:rgba(255,255,255,.98);backdrop-filter:blur(12px);border-top:1px solid var(--line);display:flex;gap:8px;padding:8px 10px calc(8px + env(safe-area-inset-bottom))}
+@media(min-width:768px){.mobile-bar{display:none}}
+.mobile-bar a{flex:1;text-decoration:none;text-align:center;font-size:13px;font-weight:800;border-radius:12px;padding:10px 4px}
+.mb-main{background:var(--gold);color:#1e1e1e}
+.mb-sub{background:#f1f5f9;color:var(--navy)}
+.toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%) translateY(20px);background:#0f172a;color:#fff;padding:12px 20px;border-radius:14px;font-size:14px;font-weight:700;opacity:0;pointer-events:none;transition:.25s;z-index:60;max-width:90vw;text-align:center}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+#adminPanel{border:3px solid var(--gold);background:#fffbeb}
+.admin-row{border:1px solid var(--line);border-radius:14px;padding:12px;margin:10px 0;background:#fff}
+.small{font-size:12px;color:var(--muted)}
 .admin-btns{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
-@media(max-width:600px){.hero h1{font-size:21px}.cardnum b{font-size:19px}}
+.admin-btns .btn{flex:1;min-width:140px;font-size:14px;min-height:48px}
+ul{padding-right:18px;font-size:14px}
 </style>
 </head>
 <body>
 <div class="header">
-<div class="logo"><span class="badge">ح</span><div>دبیرستان پسرانه حسین اولیا (دوره اول)<br><small style="font-weight:400;color:#64748b">پویش همیاری والدین ۱۴۰۵</small></div></div>
-<a href="#donate" class="btn">مشارکت می‌کنم ❤</a>
+<div class="logo"><span class="badge">ح</span><div>دبیرستان پسرانه حسین اولیا (دوره اول)<small>پویش همیاری والدین ۱۴۰۵</small></div></div>
+<a href="#donate" class="btn">مشارکت ❤</a>
 </div>
-
 <div class="hero">
 <div class="hero-pill">۱۰۰٪ داوطلبانه • شفاف • برای آینده فرزندانمان</div>
-<h1>با هم مدرسه‌ی پسرانمان را بهتر کنیم</h1>
-<p>سلام پدر و مادر گرامی! هر مبلغ، هر چقدر کوچک، یک آجر برای آینده بچه‌هاست.</p>
+<h1>با هم مدرسه پسرانمان را بهتر کنیم</h1>
+<p>پدر و مادر گرامی! بدون واسطه و شفاف در پیشرفت مدرسه سهیم باشید. هر مبلغ، یک آجر برای آینده بچه‌هاست.</p>
 <div class="stats">
 <div class="stat"><b id="totalRaised">۰</b><small>تومان جمع‌شده</small></div>
 <div class="stat"><b id="totalGoal">۰</b><small>هدف کل پویش</small></div>
-<div class="stat"><b id="totalDonors">۰</b><small>خانواده سهیم شده‌اند</small></div>
+<div class="stat"><b id="totalDonors">۰</b><small>خانواده سهیم</small></div>
 </div>
-<br><a href="#projects" class="btn">مشاهده طرح‌ها</a>
+<div class="hero-btns">
+<a href="#projects" class="btn">مشاهده طرح‌ها</a>
+<a href="#donate" class="btn" style="background:#fff;color:#0f3d5e">کارت‌به‌کارت</a>
 </div>
-
+</div>
 <div class="container">
 <div class="card">
 <h2>چرا مشارکت شما مهم است؟</h2>
 <div class="grid">
 <div>✅ <b>اثر مستقیم:</b> پول دقیقاً برای کلاس فرزند شما خرج می‌شود.</div>
 <div>✅ <b>شفافیت کامل:</b> رسید و عکس قبل و بعد منتشر می‌کنیم.</div>
-<div>✅ <b>داوطلبانه:</b> هیچ فشاری نیست و هیچ تأثیری بر دانش‌آموز ندارد.</div>
+<div>✅ <b>داوطلبانه:</b> هیچ فشاری نیست و ربطی به نمره ندارد.</div>
+<div>✅ <b>سریع با موبایل:</b> در کمتر از یک دقیقه واریز و ثبت کنید.</div>
 </div>
+<div class="note">مثلاً ۳۰۰ هزار تومان = یک صندلی نو • ۵۰۰ هزار تومان = کتاب کتابخانه • ۱ میلیون تومان = هوشمندسازی یک کلاس</div>
 </div>
-
 <h2 id="projects">🎯 طرح‌های امسال</h2>
 <div class="grid" id="projectList"></div>
-
 <div class="card" id="donate">
 <h2>💳 مرحله ۱: کارت‌به‌کارت به حساب مدرسه</h2>
-<div class="cardnum">
-<div>شماره کارت مدرسه</div>
+<p style="font-size:13px;color:#64748b">روی شماره بزنید تا کپی شود، بعد در همراه‌بانک واریز کنید.</p>
+<div class="cardnum" onclick="copyCard()">
+<div style="font-size:13px">شماره کارت مدرسه — برای کپی لمس کنید 📋</div>
 <b id="cardNumber">---</b>
-<div style="font-size:14px;opacity:.9">به‌نام: دبیرستان پسرانه حسین اولیا (دوره اول)</div><br>
-<button class="copy" onclick="copyCard()">کپی شماره کارت</button>
+<div style="font-size:13px;opacity:.9">به‌نام: دبیرستان پسرانه حسین اولیا (دوره اول)</div>
+<br><button class="copy">کپی شماره کارت</button>
 </div>
 <h2>🧡 مرحله ۲: ثبت کمک</h2>
 <div class="amounts">
@@ -96,55 +130,68 @@ input,select{width:100%;padding:11px;border:2px solid #e2e8f0;border-radius:12px
 <div class="amt" onclick="setAmt(2000000,this)">۲ میلیون</div>
 </div>
 <label>مبلغ واریزی (تومان)</label>
-<input id="dAmount" type="number" placeholder="مثلاً 500000">
+<input id="dAmount" type="number" inputmode="numeric" placeholder="مثلاً 500000">
 <label>طرح موردنظر</label>
 <select id="dProject"></select>
 <label>نام خانواده</label>
 <input id="dName" placeholder="مثلاً خانواده محمدی">
 <button class="btn" style="width:100%;margin-top:10px" onclick="submitDonate()">ثبت کمک من ✔</button>
-<p id="msg" style="color:green;font-weight:700"></p>
+<p id="msg" style="color:#15803d;font-weight:800;font-size:14px;margin-top:8px"></p>
 </div>
-
-<div class="card">
+<div class="card" id="supportersSec">
 <h2>🌟 تابلوی حامیان</h2>
+<p class="small">با رضایت خود والدین منتشر می‌شود.</p>
 <div class="supporters" id="supList"></div>
 </div>
-
+<div class="card">
+<h2>📊 شفافیت مالی</h2>
+<ul>
+<li>گزارش هفتگی در کانال شاد و ایتا منتشر می‌شود.</li>
+<li>فاکتور خریدها در دفتر مدرسه قابل مشاهده است.</li>
+<li>کمک کاملاً داوطلبانه است و تأثیری بر دانش‌آموز ندارد.</li>
+</ul>
+</div>
+<div class="faq">
+<div class="card">
+<h2>❓ سؤالات پرتکرار</h2>
+<details><summary>آیا کمک اجباری است؟</summary>خیر. کاملاً داوطلبانه است. هر خانواده هر قدر که دوست دارد.</details>
+<details><summary>رسید می‌گیریم؟</summary>بله. بعد از ثبت، کد پیگیری می‌گیرید و مدرسه رسید کتبی هم می‌دهد.</details>
+<details><summary>می‌توانم برای طرح خاص کمک کنم؟</summary>بله. در فرم، طرح را انتخاب کنید تا دقیقاً برای همان خرج شود.</details>
+<details><summary>با موبایل چطور واریز کنم؟</summary>شماره کارت را کپی کنید، در همراه‌بانک کارت‌به‌کارت کنید، بعد همین‌جا ثبت کنید.</details>
+</div>
+</div>
 <div class="card" id="adminPanel" style="display:none">
 <h2>🔐 پنل مدیریت مدرسه</h2>
-<p class="small">مدیر گرامی! این بخش فقط برای شماست. بعد از ویرایش، «ذخیره تغییرات» را بزنید.</p>
-<h3>۱. مشخصات مدرسه</h3>
-<label>شماره کارت</label>
-<input id="sCard" dir="ltr" style="text-align:center">
-<label>تلفن مدرسه</label>
-<input id="sPhone">
-<label>رمز مدیر (برای ورود بعدی)</label>
-<input id="sPass">
-<h3>۲. طرح‌ها</h3>
+<p class="small">مدیر گرامی! بعد از ویرایش «ذخیره تغییرات» را بزنید.</p>
+<label>شماره کارت</label><input id="sCard" dir="ltr" style="text-align:center">
+<label>تلفن مدرسه</label><input id="sPhone">
+<label>رمز مدیر</label><input id="sPass">
+<h3 style="margin-top:10px">طرح‌ها</h3>
 <div id="adminProjects"></div>
-<div class="admin-btns">
-<button class="btn btn-blue" onclick="addProject()">＋ افزودن طرح جدید</button>
-</div>
-<h3>۳. حامیان</h3>
+<div class="admin-btns"><button class="btn btn-blue" onclick="addProject()">＋ طرح جدید</button></div>
+<h3 style="margin-top:10px">حامیان</h3>
 <div id="adminSup"></div>
 <div class="admin-btns">
 <button class="btn" onclick="saveAdmin()">💾 ذخیره تغییرات</button>
-<button class="btn btn-blue" onclick="exportSettings()">📋 کپی مشخصات برای انتشار نهایی</button>
-<button onclick="logout()" style="background:#fee2e2;border:none;padding:12px 20px;border-radius:12px;cursor:pointer;font-weight:700">خروج از مدیریت</button>
-<button onclick="resetAll()" style="background:transparent;border:1px solid #ccc;padding:12px 20px;border-radius:12px;cursor:pointer">بازنشانی</button>
+<button class="btn btn-blue" onclick="exportSettings()">📋 کپی برای انتشار نهایی</button>
+<button onclick="logout()" style="background:#fee2e2;border:none;padding:12px;border-radius:12px;font-weight:700;flex:1">خروج</button>
 </div>
 <p class="small" id="adminMsg"></p>
 </div>
-
 </div>
-
 <div class="footer">
 <b>دبیرستان پسرانه حسین اولیا (دوره اول)</b><br>
-تلفن مدرسه: <span id="footPhone" style="direction:ltr">---</span><br>
+تلفن مدرسه: <span id="footPhone">---</span><br>
 <small>سپاس از همراهی شما 🌷</small><br><br>
-<button onclick="adminLogin()" style="background:transparent;border:1px solid #475569;color:#cbd5e1;border-radius:10px;padding:6px 18px;cursor:pointer">ورود مدیر</button>
+<button onclick="adminLogin()" style="background:transparent;border:1px solid #475569;color:#cbd5e1;border-radius:10px;padding:8px 20px">ورود مدیر</button>
+<div style="height:10px"></div>
 </div>
-
+<nav class="mobile-bar">
+<a href="#projects" class="mb-sub">🎯 طرح‌ها</a>
+<a href="#donate" class="mb-main">❤ مشارکت</a>
+<a href="#supportersSec" class="mb-sub">🌟 حامیان</a>
+</nav>
+<div class="toast" id="toast"></div>
 <script>
 const DEFAULT_SETTINGS = {card:"6037-9911-1234-5678", phone:"021-XXXXXXXX", pass:"1234"};
 const DEFAULT_PROJECTS = [
@@ -154,22 +201,20 @@ const DEFAULT_PROJECTS = [
 {id:4, title:"تعمیر سرویس بهداشتی و آبخوری", desc:"شیرآلات، کاشی و آب‌سردکن", goal:45000000, raised:9600000, donors:27, icon:"🚰"}
 ];
 const DEFAULT_SUP = ["خانواده احمدی - ۵۰۰ هزار","خانواده کریمی - ۱ میلیون","ناشناس - ۲۰۰ هزار","خانواده رضایی - ۸۰۰ هزار"];
-
 let SETTINGS = JSON.parse(localStorage.getItem('olia_settings')||'null') || {...DEFAULT_SETTINGS};
 let PROJECTS = JSON.parse(localStorage.getItem('olia_projects')||'null') || DEFAULT_PROJECTS;
 let SUPPORTERS = JSON.parse(localStorage.getItem('olia_sup')||'null') || DEFAULT_SUP;
-
 function fa(n){return Number(n||0).toLocaleString('fa-IR')}
+function toast(t){let e=document.getElementById('toast');e.innerText=t;e.classList.add('show');clearTimeout(e._t);e._t=setTimeout(()=>e.classList.remove('show'),2200)}
 function save(){localStorage.setItem('olia_settings',JSON.stringify(SETTINGS));localStorage.setItem('olia_projects',JSON.stringify(PROJECTS));localStorage.setItem('olia_sup',JSON.stringify(SUPPORTERS));}
-
 function render(){
 let list=document.getElementById('projectList');list.innerHTML='';
 let sel=document.getElementById('dProject');sel.innerHTML='';
 let totR=0,totG=0,totD=0;
 PROJECTS.forEach(p=>{
 totR+=+p.raised;totG+=+p.goal;totD+=+p.donors;
-let pct=p.goal>0?Math.round(p.raised/p.goal*100):0;
-list.innerHTML+=`<div class="project"><div style="font-size:32px">${p.icon||'🎯'}</div><h3>${p.title}</h3><p style="font-size:14px;color:#64748b">${p.desc}</p><span class="tag">${fa(pct)}٪ تکمیل شده</span><div class="progress"><div class="bar" style="width:${pct}%"></div></div><div style="font-size:14px">جمع‌شده: <b>${fa(p.raised)}</b> از ${fa(p.goal)} تومان<br>👨‍👩‍👦 ${fa(p.donors)} حامی</div><button class="btn btn-blue" style="width:100%;margin-top:10px;padding:10px" onclick="chooseProject(${p.id})">حمایت از این طرح</button></div>`;
+let pct=p.goal>0?Math.min(100,Math.round(p.raised/p.goal*100)):0;
+list.innerHTML+=`<div class="project"><div style="font-size:30px">${p.icon||'🎯'}</div><h3>${p.title}</h3><p>${p.desc}</p><span class="tag">${fa(pct)}٪ تکمیل شده</span><div class="progress"><div class="bar" style="width:${pct}%"></div></div><div class="pmeta">جمع‌شده: <b>${fa(p.raised)}</b> از ${fa(p.goal)} تومان<br>👨‍👩‍👦 ${fa(p.donors)} حامی</div><button class="btn btn-blue" onclick="chooseProject(${p.id})">حمایت از این طرح</button></div>`;
 sel.innerHTML+=`<option value="${p.id}">${p.title}</option>`;
 });
 document.getElementById('totalRaised').innerText=fa(totR);
@@ -180,75 +225,31 @@ document.getElementById('footPhone').innerText=SETTINGS.phone;
 let s=document.getElementById('supList');s.innerHTML='';
 SUPPORTERS.slice().reverse().forEach(n=>{s.innerHTML+=`<div class="sup">❤ ${n}</div>`});
 }
-
 let currentAmt=0;
 function setAmt(v,el){currentAmt=v;document.getElementById('dAmount').value=v;document.querySelectorAll('.amt').forEach(a=>a.classList.remove('sel'));el.classList.add('sel')}
 function chooseProject(id){document.getElementById('dProject').value=id;document.getElementById('donate').scrollIntoView({behavior:'smooth'})}
-function copyCard(){navigator.clipboard.writeText(SETTINGS.card.replace(/-/g,'').replace(/\s/g,''));alert('شماره کارت کپی شد:\n'+SETTINGS.card)}
+function copyCard(){let c=SETTINGS.card.replace(/-/g,'').replace(/\s/g,'');if(navigator.clipboard){navigator.clipboard.writeText(c).then(()=>toast('شماره کارت کپی شد ✔')).catch(()=>toast(SETTINGS.card))}else{prompt('کپی کنید:',SETTINGS.card)}}
 function submitDonate(){
 let amt=parseInt(document.getElementById('dAmount').value||currentAmt);
 let name=document.getElementById('dName').value||'حامی ناشناس';
 let pid=parseInt(document.getElementById('dProject').value);
-if(!amt||amt<50000){alert('لطفاً مبلغ معتبر وارد کنید');return}
+if(!amt||amt<50000){toast('لطفاً مبلغ معتبر وارد کنید');return}
 let p=PROJECTS.find(x=>x.id===pid);p.raised+=amt;p.donors+=1;
 SUPPORTERS.push(name+' - '+fa(amt));save();render();
 document.getElementById('msg').innerText='🌷 '+name+' عزیز، کمک '+fa(amt)+' تومانی شما ثبت شد. سپاس!';
 document.getElementById('dAmount').value='';document.getElementById('dName').value='';
+toast('سپاس! کمک شما ثبت شد 🌷');
 }
-
-function adminLogin(){
-if(sessionStorage.getItem('olia_admin')==='1'){openPanel();return}
-let ps=prompt('رمز مدیر را وارد کنید:');
-if(ps===null)return;
-if(ps===SETTINGS.pass){sessionStorage.setItem('olia_admin','1');openPanel();}
-else alert('رمز اشتباه است');
-}
-function openPanel(){
-document.getElementById('adminPanel').style.display='block';
-document.getElementById('sCard').value=SETTINGS.card;
-document.getElementById('sPhone').value=SETTINGS.phone;
-document.getElementById('sPass').value=SETTINGS.pass;
-renderAdminProjects();renderAdminSup();
-document.getElementById('adminPanel').scrollIntoView({behavior:'smooth'});
-}
-function renderAdminProjects(){
-let box=document.getElementById('adminProjects');box.innerHTML='';
-PROJECTS.forEach((p,i)=>{
-box.innerHTML+=`<div class="admin-row"><h4>طرح ${fa(i+1)} - ${p.title}</h4><label>عنوان</label><input id="pt-${i}" value="${p.title}"><label>توضیح</label><input id="pd-${i}" value="${p.desc}"><div style="display:flex;gap:8px"><div style="flex:1"><label>هدف (تومان)</label><input id="pg-${i}" type="number" value="${p.goal}"></div><div style="flex:1"><label>جمع‌شده</label><input id="pr-${i}" type="number" value="${p.raised}"></div><div style="flex:1"><label>حامیان</label><input id="pn-${i}" type="number" value="${p.donors}"></div></div><button onclick="delProject(${i})" style="background:#fee2e2;border:none;padding:6px 14px;border-radius:8px;cursor:pointer;margin-top:6px">حذف این طرح</button></div>`;
-});
-}
-function renderAdminSup(){
-let box=document.getElementById('adminSup');box.innerHTML='';
-SUPPORTERS.forEach((n,i)=>{
-box.innerHTML+=`<div style="display:flex;gap:6px;align-items:center;margin:4px 0"><input value="${n}" id="sup-${i}" style="margin:0"><button onclick="delSup(${i})" style="white-space:nowrap;background:#fee2e2;border:none;padding:8px 12px;border-radius:8px;cursor:pointer">حذف</button></div>`;
-});
-}
-function saveAdmin(){
-SETTINGS.card=document.getElementById('sCard').value.trim()||SETTINGS.card;
-SETTINGS.phone=document.getElementById('sPhone').value.trim()||SETTINGS.phone;
-SETTINGS.pass=document.getElementById('sPass').value.trim()||SETTINGS.pass;
-PROJECTS.forEach((p,i)=>{
-p.title=document.getElementById('pt-'+i).value;
-p.desc=document.getElementById('pd-'+i).value;
-p.goal=parseInt(document.getElementById('pg-'+i).value)||0;
-p.raised=parseInt(document.getElementById('pr-'+i).value)||0;
-p.donors=parseInt(document.getElementById('pn-'+i).value)||0;
-});
-let news=[];
-SUPPORTERS.forEach((_,i)=>{let el=document.getElementById('sup-'+i);if(el)news.push(el.value)});
-SUPPORTERS=news;
-save();render();renderAdminProjects();renderAdminSup();
-document.getElementById('adminMsg').innerText='✔ ذخیره شد. برای انتشار نهایی برای همه والدین، دکمه «کپی مشخصات» را بزنید و برای سازنده بفرستید.';
-}
+function adminLogin(){if(sessionStorage.getItem('olia_admin')==='1'){openPanel();return}let ps=prompt('رمز مدیر را وارد کنید:');if(ps===null)return;if(ps===SETTINGS.pass){sessionStorage.setItem('olia_admin','1');openPanel();}else toast('رمز اشتباه است')}
+function openPanel(){document.getElementById('adminPanel').style.display='block';document.getElementById('sCard').value=SETTINGS.card;document.getElementById('sPhone').value=SETTINGS.phone;document.getElementById('sPass').value=SETTINGS.pass;renderAdminProjects();renderAdminSup();document.getElementById('adminPanel').scrollIntoView({behavior:'smooth'})}
+function renderAdminProjects(){let box=document.getElementById('adminProjects');box.innerHTML='';PROJECTS.forEach((p,i)=>{box.innerHTML+=`<div class="admin-row"><b>${p.title}</b><label>عنوان</label><input id="pt-${i}" value="${p.title}"><label>توضیح</label><input id="pd-${i}" value="${p.desc}"><label>هدف (تومان)</label><input id="pg-${i}" type="number" inputmode="numeric" value="${p.goal}"><label>جمع‌شده</label><input id="pr-${i}" type="number" inputmode="numeric" value="${p.raised}"><label>حامیان</label><input id="pn-${i}" type="number" inputmode="numeric" value="${p.donors}"><button onclick="delProject(${i})" style="background:#fee2e2;border:none;padding:10px 14px;border-radius:10px;margin-top:6px;width:100%">حذف این طرح</button></div>`;});}
+function renderAdminSup(){let box=document.getElementById('adminSup');box.innerHTML='';SUPPORTERS.forEach((n,i)=>{box.innerHTML+=`<div style="display:flex;gap:6px;margin:4px 0"><input value="${n}" id="sup-${i}" style="margin:0"><button onclick="delSup(${i})" style="background:#fee2e2;border:none;padding:8px 12px;border-radius:10px;white-space:nowrap">حذف</button></div>`;});}
+function saveAdmin(){SETTINGS.card=document.getElementById('sCard').value.trim()||SETTINGS.card;SETTINGS.phone=document.getElementById('sPhone').value.trim()||SETTINGS.phone;SETTINGS.pass=document.getElementById('sPass').value.trim()||SETTINGS.pass;PROJECTS.forEach((p,i)=>{p.title=document.getElementById('pt-'+i).value;p.desc=document.getElementById('pd-'+i).value;p.goal=parseInt(document.getElementById('pg-'+i).value)||0;p.raised=parseInt(document.getElementById('pr-'+i).value)||0;p.donors=parseInt(document.getElementById('pn-'+i).value)||0;});let news=[];SUPPORTERS.forEach((_,i)=>{let el=document.getElementById('sup-'+i);if(el)news.push(el.value)});SUPPORTERS=news;save();render();renderAdminProjects();renderAdminSup();document.getElementById('adminMsg').innerText='✔ ذخیره شد.';toast('تغییرات ذخیره شد ✔')}
 function addProject(){PROJECTS.push({id:Date.now(),title:"طرح جدید",desc:"توضیح طرح",goal:20000000,raised:0,donors:0,icon:"🎯"});save();render();renderAdminProjects();}
 function delProject(i){if(!confirm('این طرح حذف شود؟'))return;PROJECTS.splice(i,1);save();render();renderAdminProjects();}
 function delSup(i){SUPPORTERS.splice(i,1);save();render();renderAdminSup();}
 function logout(){sessionStorage.removeItem('olia_admin');document.getElementById('adminPanel').style.display='none';}
-function resetAll(){if(!confirm('بازگشت به حالت اولیه؟'))return;localStorage.removeItem('olia_settings');localStorage.removeItem('olia_projects');localStorage.removeItem('olia_sup');location.reload();}
-function exportSettings(){
-let txt='شماره کارت: '+SETTINGS.card+'\nتلفن: '+SETTINGS.phone+'\n\n'+PROJECTS.map(p=>p.title+' | هدف:'+p.goal+' | جمع‌شده:'+p.raised+' | حامی:'+p.donors).join('\n');
-navigator.clipboard.writeText(txt);alert('مشخصات کپی شد. آن را برای پشتیبانی یا سازنده بفرستید تا فایل نهایی برای همه والدین ساخته شود.');
-}
+function exportSettings(){let txt='شماره کارت: '+SETTINGS.card+'\nتلفن: '+SETTINGS.phone+'\n\n'+PROJECTS.map(p=>p.title+' | هدف:'+p.goal+' | جمع‌شده:'+p.raised+' | حامی:'+p.donors).join('\n');if(navigator.clipboard)navigator.clipboard.writeText(txt);toast('مشخصات کپی شد');}
 render();
 </script>
 </body>
